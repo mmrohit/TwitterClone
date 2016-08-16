@@ -1,0 +1,45 @@
+@CHARSET "ISO-8859-1";
+
+
+body
+{
+	padding-top: 1%;
+	background-image: url("Images/twitterbird2.JPG");
+	background-repeat: no-repeat;
+}
+
+
+
+a
+{
+	color: highlight;
+}
+
+a:VISITED
+{
+	color: highlight;
+}
+
+fieldset
+{
+	width:25%;
+	border-bottom-color:aqua;
+	border-left-color:aqua;
+	border-right-color:aqua;
+	border-top-color:aqua;
+	background-position:center;
+	textalign: justify;	 
+}
+
+
+legend{
+	
+	azimuth: left-side;
+	color: highlight;
+	
+}
+
+.errorMessage {  
+color: red;  
+font-size: 0.8em;  
+} 

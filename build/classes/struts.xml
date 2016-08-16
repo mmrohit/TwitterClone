@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+<package name="MyTweets" extends="struts-default" namespace="/" >
+
+<action name="hometweets" class="Action.HomeTweetsAction">
+<result name="success">/hometweets.jsp</result>
+<result name="error">/home.jsp</result>
+</action>
+
+
+<action name="ntweets" class="Action.MyTweetsAction">
+<result name="success">/mytweets.jsp</result>
+<result name="error">/home.jsp</result>
+</action>
+
+<action name="deletetweet" class="Action.DeleteTweetAction">
+<result name="success">/refresh.jsp</result>
+<result name="error">/home.jsp</result>
+</action>
+<action name="edittweet" class="Action.GetTweetMessage">
+<result name="success">/edittweet.jsp</result>
+<result name="error">/home.jsp</result>
+</action>
+<action name="edittweetaction" class="Action.EditTweetAction">
+<result name="success">/refresh.jsp</result>
+</action>
+
+</package>
+
+
+	<package name="header" extends="struts-default" namespace="/">
+	<action name="home">
+	<result>/home.jsp</result>
+	</action>
+	<action name="profile" class="Action.GetUserData">
+	<result name="success">/Profilepage.jsp</result>
+	<result name="error">/login.jsp</result>
+	</action>
+	<action name="signout" class="Action.SignoutAction">
+	<result>/home.jsp</result>
+	</action>
+	</package>
+	
+	
+
+	<package name="delete" extends="struts-default" namespace="/">
+	<action name="delete" class="Action.DeleteAction">
+	<result name="success">/goodbye.jsp</result>
+	<result name="error">/home.jsp</result>
+	</action>
+	
+	</package>
+	
+	<package name="login" extends="struts-default" namespace="/">
+		<action name="login" class="Action.LoginAction">
+			<result name="success">/home.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+	
+	
+		
+		<action name="nologin">
+		<result>/login.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="register" extends="struts-default" namespace="/">
+
+		<action name="registerpage">
+			<result>/Registration.jsp</result>
+		</action>
+
+		<action name="register" class="Action.RegisterAction">
+			<result name="success">/home.jsp</result>
+			<result name="input">/Registration.jsp</result>
+			<result name="error">/ExistsRegistration.jsp</result>
+			
+		</action>
+	</package>
+
+
+<package name="update" extends="struts-default" namespace="/">
+		<action name="update" class="Action.UpdateAction">
+			<result name="success">/refresh.jsp</result>
+			<result name="input">/Profilepage.jsp</result>
+		</action>
+	</package>
+
+
+<package name="InsertTweet" extends="struts-default" namespace="/">
+<action name="tweet" class="Action.TweetAction">
+<result name="success">/refresh.jsp </result>
+<result name="error">/home.jsp</result>
+</action>
+</package>
+
+<package name="search/follow/following" extends="struts-default" namespace="/">
+<action name="search" class="Action.SearchAction">
+<result name="success">/search.jsp</result>
+<result name="error">/login.jsp</result>
+<result name="input">/home.jsp</result>
+</action> 
+
+<action name="follow" class="Action.FollowAction">
+<result name="success">/refresh.jsp</result>
+<result name="error">/refresh.jsp</result>
+</action>
+
+<action name="followers">
+<result>/following.jsp</result>
+</action>
+<action name="following">
+<result>/followers.jsp</result>
+</action>
+<action name="unfollow" class="Action.UnFollowAction">
+<result name="success">/refresh.jsp</result>
+<result name="error">/login.jsp</result>
+</action>
+</package>
+
+</struts>

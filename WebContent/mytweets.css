@@ -1,0 +1,15 @@
+body
+{
+	padding-top: 1%;
+	background-image: url("Images/The Background.png");
+	
+}
+a
+{
+	color: 	 #000080;
+}
+
+a:VISITED
+{
+	color: 	 #000080;
+}
